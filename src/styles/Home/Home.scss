@@ -1,0 +1,22 @@
+.homeWrapper {
+    @include width-height-margin-padding(100%, 100%, 0, 0);
+    overflow-y: scroll;
+}
+.home__title {
+    @include width-height-margin-padding(100%, auto, 0, 5vh 0);
+    background-image: $background_img;
+
+    > h1 {
+        @include width-height-margin-padding(100%, 100%, 3% 0 -3% 0, 5vh 0);
+        background: $color_header_nav_button;
+        color: $background_header_nav_large;
+        text-align: center;
+        font-size: 4vw;
+        font-family: $font_title;
+
+        @media screen and (max-width: 500px) {
+            font-size: 5vw;
+        }
+    }
+}
+

@@ -1,0 +1,17 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\public",
+    "\\src",
+    "\\src\\containers",
+    "\\src\\containers\\Sections",
+    "\\src\\store",
+    "\\src\\styles",
+    "\\src\\styles\\Section",
+    "\\src\\styles\\UI",
+    "\\src\\UI",
+    "\\src\\UI\\Buttons"
+  ],
+  "SelectedNode": "\\src\\store\\Home",
+  "PreviewInSolutionExplorer": false
+}

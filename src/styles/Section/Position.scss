@@ -1,0 +1,9 @@
+.section_position__wrapper {
+    @include width-height-margin-padding(100%, auto, 0, 0);
+    border: 1px solid red;
+    background-image: $background_img;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+}

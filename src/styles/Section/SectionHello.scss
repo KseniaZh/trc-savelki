@@ -1,0 +1,192 @@
+.section_hello__wrapper {
+    @include width-height-margin-padding(100%, auto, 0, 0);
+    padding-top: 10vh;
+    position: relative;
+    z-index: 50;
+
+    @media screen and (max-width: 699px) {
+        padding-top: 3em;
+    }
+
+    @media screen and (max-width: 900px) {
+        padding-top: 4em;
+    }
+
+    img {
+        width: 100%;
+        z-index: 50;
+        opacity: 1;
+        margin-top: 1vh;
+
+        @media screen and (max-width: 900px) {
+            margin-top: 0;
+        }
+    }
+}
+.section_hello_1 {
+    @include width-height-margin-padding(100%, 25%, 0, 0);
+    display: flex;
+    position: absolute;
+    z-index: 51;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20%;
+    top: 17vh;
+    background: $background_hello__panorama_blind_2;
+
+    @media screen and (max-width: 1000px) {
+        height: 35%;
+        margin-top: 15%;
+    }
+
+    @media screen and (max-width: 800px) {
+        margin-top: 15%;
+    }
+
+    @media screen and (max-width: 600px) {
+        margin-top: 13%;
+    }
+
+    @media screen and (max-width: 500px) {
+        margin-top: 10%;
+    }
+
+    @media screen and (max-width: 450px) {
+        margin-top: 6%;
+    }
+
+    > :nth-child(1) {
+        font-size: 4vw;
+        font-weight: bold;
+        color: $color_header_nav_button_hover;
+        z-index: 52;
+        font-family: $font_title;
+
+        @media screen and (max-width: 1000px) {
+            font-size: 5.5vw;
+        }
+
+        @media screen and (max-width: 400px) {
+            font-size: 6vw;
+        }
+    }
+
+    > :nth-child(2),
+    > :nth-child(3) {
+        font-size: 2.5vw;
+        //  font-weight: bold;
+        color: $color_2;
+        z-index: 52;
+        margin-top: 1.5%;
+        font-family: 'Marck Script', cursive;
+    }
+
+    > :nth-child(2) {
+        @media screen and (max-width: 1000px) {
+            font-size: 4vw;
+        }
+
+        @media screen and (max-width: 400px) {
+            font-size: 5vw;
+        }
+    }
+
+    > :nth-child(3) {
+        margin-top: 1%;
+        color: $color_header_nav_button_hover;
+
+        @media screen and (max-width: 1000px) {
+            font-size: 3vw;
+        }
+
+        @media screen and (max-width: 400px) {
+            font-size: .7em;
+        }
+    }
+}
+
+
+.section_hello_2 {
+    z-index: 50;
+    background-image: url(../../img/fon_2.png);
+    width: 100%;
+    padding: 7% 0 4%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+
+    @media screen and (max-width: 1200px) {
+        padding: 10% 0;
+    }
+
+    @media screen and (max-width: 1100px) {
+        padding: 11% 0 2%;
+    }
+
+    @media screen and (max-width: 900px) {
+        padding: 15% 0 2%;
+    }
+
+    @media screen and (max-width: 750px) {
+        padding: 20% 0 2%;
+    }
+
+    @media screen and (max-width: 500px) {
+        padding: 25% 0 0%;
+    }
+
+    > * {
+        margin-left: auto;
+        margin-right: auto;
+        font-weight: bold;
+        color: $color_5;
+    }
+
+    > :nth-child(1) {
+        font-size: 3vw;
+        margin-bottom: 2%;
+        font-family: $font_header;
+    }
+
+    > :nth-child(2) {
+        font-size: 2vw;
+        font-family: $font_header;
+    }
+}
+
+.section_hello_tel {
+    background-image: url(../../img/fon_2.png);
+    padding: 1% 2%;
+    border-radius: 5px;
+    display: flex;
+    position: absolute;
+    top: 25%;
+    right: 3vw;
+    z-index: 100;
+    color: $color_1;
+    font-size: 1.5vw;
+    font-weight: bold;
+    box-shadow: 0px 0px 5px 1px $color_header_nav_button;
+    font-family: $font_header;
+
+    @media screen and (max-width: 900px) {
+        font-size: 2vw;
+    }
+
+    @media screen and (max-width: 699px) {
+        font-size: 2.5vw;
+    }
+
+    @media screen and (max-width: 550px) {
+        font-size: 3vw;
+    }
+}
+.hello_mail {
+    top: 35%;
+}
+.section_hello_tel:hover {
+    background: $color_header_nav_button;
+    color: $color_header_nav_button_hover;
+    box-shadow: 0px 0px 5px 1px $color_header_nav_button_hover;
+}

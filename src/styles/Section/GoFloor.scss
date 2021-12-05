@@ -1,0 +1,193 @@
+.go_floor__wrapper {
+    @include width-height-margin-padding(100%, auto, 0, 0);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-image: $background_img;
+
+    @media screen and (max-width: 870px) {
+        flex-direction: column;
+    }
+}
+.go_floor_left {
+    @include width-height-margin-padding(40%, auto, 2% 0 1% 1%, 0% 1% 5% 5%);  
+}
+.go_floor_right {
+    @include width-height-margin-padding(40%, auto, 2% 1% 1% 0, 0% 5% 5% 1%);
+}
+.go_floor {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @media screen and (max-width: 870px) {
+        @include width-height-margin-padding(75%, auto, 0, 0);
+    }
+
+    @media screen and (max-width: 600px) {
+        @include width-height-margin-padding(85%, auto, 0, 0);
+    }
+}
+
+.go_floor_component {
+    @include width-height-margin-padding(100%, auto, 1.2% 0, 2%);
+    display: flex;
+    flex-direction: row;
+    background: $background_go_floot;
+    border-radius: .8em;
+    box-shadow: 0px 0px 2px 2px rgba(31, 41, 75, 0.42);
+    -moz-transition: all .5s ease-out;
+    -o-transition: all .5s ease-out;
+    -webkit-transition: all .5s ease-out;
+
+    @media screen and (max-width: 450px) {
+        margin-bottom: 2%;
+    }
+}
+
+.go_floor_component:hover {
+    -moz-transition: all .5s ease-out;
+    -o-transition: all .5s ease-out;
+    -webkit-transition: all .5s ease-out;
+    background: $background_go_floot_hover;
+}
+
+.go_floor_component:hover {
+    background: $background_go_floot_hover;
+    animation: prizActiv_1 .5s 1 0s linear;
+}
+
+.go_floor_component__button {
+    @include width-height-margin-padding(10vw, 10vw, 0, 0);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media screen and (max-width: 700px) {
+        @include width-height-margin-padding(15vw, 15vw, 0, 0);
+    }
+
+    @media screen and (max-width: 500px) {
+        @include width-height-margin-padding(20vw, 20vw, 0, 0);
+    }
+
+    > div:nth-child(1) {
+        @include width-height-margin-padding(90%, 90%, 0, 0);
+        border-radius: 50%;
+        overflow: hidden;
+        box-shadow: 0px 0px 2px 2px rgba(31, 41, 75, 0.22);
+
+        > * {
+            @include width-height-margin-padding(90%, 90%, 0, 0);
+            border-radius: 50%;
+            overflow: hidden;
+
+            > img {
+                height: 100%;
+                z-index: 50;
+            }
+        }
+    }
+}
+.go_floor_component__about {
+    @include width-height-margin-padding(60%, auto, 0, 0 5%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-weight: bold;
+    font-family: $font_header;
+
+    @media screen and (max-width: 870px) {
+        @include width-height-margin-padding(60%, auto, 0, 0 3% 0 20%);
+    }
+
+    @media screen and (max-width: 500px) {
+        @include width-height-margin-padding(60%, auto, 0, 0 3% 0 10%);
+    }
+
+    > * > div:nth-child(1) {
+        font-size: 2em;
+        color: $color_1;
+        margin-bottom: 1%;
+
+        @media screen and (max-width: 500px) {
+            font-size: 6vw;
+        }
+    }
+
+    > * > div:nth-child(2) {
+        color: $color_5;
+
+        @media screen and (max-width: 1030px) {
+            font-size: .9em;
+        }
+
+        @media screen and (max-width: 920px) {
+            font-size: .8em;
+        }
+
+        @media screen and (max-width: 870px) {
+            font-size: 1.1em;
+        }
+
+        @media screen and (max-width: 630px) {
+            font-size: 1em;
+        }
+
+        @media screen and (max-width: 400px) {
+            font-size: .9em;
+        }
+
+        @media screen and (max-width: 360px) {
+            font-size: .8em;
+        }
+    }
+}
+.hidden_picture_wrapper {
+    @include width-height-margin-padding(15%, auto, 0, 0);
+
+    @media screen and (max-width: 500px) {
+        display: none;
+    }
+
+    @media screen and (max-height: 500px) {
+        display: none;
+    }
+
+    .block_hidden_picture {
+        @include width-height-margin-padding(100%, 100%, 0, 0);
+
+        > *:nth-child(1) {
+            font-size: 2em;
+            color: $color_5;
+            margin-bottom: 5%;
+        }
+
+        > *:nth-child(1):hover {
+            color: $color_1;
+            animation: prizHover .2s 2 0s linear;
+        }
+
+        > div {
+            font-family: $font_header;
+            color: $color_5;
+            text-align: center;
+            font-weight: bold;
+
+            @media screen and (max-width: 1030px) {
+                font-size: .9em;
+            }
+
+            @media screen and (max-width: 920px) {
+                font-size: .8em;
+            }
+
+            @media screen and (max-width: 870px) {
+                font-size: 1em;
+            }
+        }
+    }
+}

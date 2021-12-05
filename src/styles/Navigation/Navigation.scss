@@ -1,0 +1,82 @@
+.Nav_header {
+    background: $background_Nav_header;
+    @include width-height-margin-padding( 100%, $height_Nav, 0, 0);
+    display: flex;
+    flex-direction: row;
+}
+
+.Nav_header__logo {
+    @include width-height-margin-padding( $width_logo, 100%, 0, 0);
+    overflow: hidden;
+    cursor: pointer;
+    border: 1px solid red; //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+}
+.Nav_header__title_nav {
+    display: flex;
+    flex-direction: column;
+
+    @include width-height-margin-padding( 85%, 100%, 0, 0);
+
+    .Nav_header__title {
+        @include width-height-margin-padding( 100%, 70%, 0, 0);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-right: $width_logo;
+    }
+
+    nav {
+        @include width-height-margin-padding( 100%, 30%, 0, 0 1% 0 5%);
+        display: flex;
+        flex-direction: row;
+
+        > * {
+            @include width-height-margin-padding( 10%, 100%, 0, 0);
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            background: $background_Nav_button;
+            color: $color_Nav_button;
+            cursor: pointer;
+            font-family: 'Alegreya Sans SC', sans-serif;
+            /* text-transform: uppercase;
+            letter-spacing: 1px;*/
+            font-weight: bolder;
+
+            > :last-child {
+                margin-left: 9%;
+            }
+
+            @include tr-border( 0, 1px, 0, 1px, $background_Nav_header)
+        }
+
+        > *:hover {
+            color: $background_Nav_button;
+            background: $color_Nav_button;
+            height: 150%;
+            -moz-transition: height .5s ease-out 0s, color 0.2s ease-out 0s, background 0.2s ease-out 0s;
+            -o-transition: height .5s ease-out 0s, color 0.2s ease-out 0s, background 0.2s ease-out 0s;
+            -webkit-transition: height .5s ease-out 0s, color 0.2s ease-out 0s, background 0.2s ease-out 0s;
+        }
+
+        .Nav_header__unique {
+            margin: 0 3% 0 6%;
+        }
+    }
+}
+
+.Nav_header__button_icon{
+
+
+}
+.Nav_header__button_icon:hover {
+    animation: hover-nav_header__icon .2s 2 0s linear;
+    
+}
+.Nav_header__button_name {
+
+    @media screen and (max-width: 700px) {
+        display: none;
+    }
+}

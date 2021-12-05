@@ -1,0 +1,107 @@
+.contacts__wrapper {
+    @include width-height-margin-padding(100%, auto, 0, 1% 0);
+    background-image: $background_img;
+}
+.contacts__address__wrapper {
+    @include width-height-margin-padding(98%, auto, 0 auto, 0);
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+}
+.contacts__address {
+    @include width-height-margin-padding(100%, auto, 0 auto, 1%);
+    display: flex;
+    position:relative;
+    flex-direction: column;
+
+}
+.contacts__address__address {
+    color: $color_header_nav_button;
+    text-align: center;
+    font-size: 2vw;
+    font-weight: bold;
+    font-family: $font_header;
+
+    @media screen and (max-width: 900px) {
+        margin: 2% auto;
+        font-size: 1.5em;
+    }
+
+    @media screen and (max-width: 550px) {
+        margin: 2% auto;
+        font-size: 1.2em;
+    }
+
+    @media screen and (max-width: 400px) {
+        font-size: 1em;
+        margin: 2% auto;
+    }
+}
+
+.contacts__tel {
+    @include width-height-margin-padding(25%, auto, 2% 0 0 35%, 1%);
+    background: $background_go_floot;
+    border-radius: 5px;
+    display: flex;
+    color: $color_1;
+    font-size: 1.5vw;
+    font-weight: bold;
+    box-shadow: 0px 0px 2px 2px rgba(31, 41, 75, 0.42);
+    font-family: $font_header;
+
+    > * {
+        margin: 3% auto;
+    }
+
+    @media screen and (max-width: 900px) {
+        @include width-height-margin-padding(55%, auto, 2% auto, 1%);
+        font-size: 1.5em;
+    }
+
+    @media screen and (max-width: 550px) {
+        font-size: 1.2em;
+    }
+
+    @media screen and (max-width: 450px) {
+        font-size: 1.1em;
+    }
+
+    @media screen and (max-width: 400px) {
+        @include width-height-margin-padding(85%, auto, 2% auto, 1%);
+        font-size: 1em;
+    }
+}
+.contacts__tel:hover {
+    background: $color_header_nav_button;
+    color: $color_header_nav_button_hover;
+    box-shadow: 0px 0px 5px 1px $color_header_nav_button_hover;
+}
+.contacts__map {
+    @include width-height-margin-padding(100%, auto, 0, 0);
+    overflow: hidden;
+
+    @media screen and (max-width: 1199px) {
+        @include width-height-margin-padding(100%, auto, 2% auto, 1%);
+    }
+
+    @media screen and (max-width: 900px) {
+        @include width-height-margin-padding(100%, auto, 2% auto, 1%);
+        font-size: 1em;
+    }
+
+    @media screen and (max-width: 699px) {
+        @include width-height-margin-padding(100%, 390px, 2% auto, 1%);
+        font-size: 1em;
+    }
+
+    @media screen and (max-width: 500px) {
+        @include width-height-margin-padding(100%, 295px, 2% auto, 1%);
+        font-size: 1em;
+    }
+
+    @media screen and (max-width: 370px) {
+        @include width-height-margin-padding(100%, 295px, 2% auto, 1%);
+        font-size: 1em;
+    }
+}
+

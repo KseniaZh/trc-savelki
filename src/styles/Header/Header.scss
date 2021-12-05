@@ -1,0 +1,118 @@
+.header_wrapper {
+    margin-top: 0 !important;
+    background: $background_header_nav_large;
+    background-image: url(../../img/fon_2.png);
+    @include width-height-margin-padding(100%, 5em, 0, 0);
+    display: flex;
+    position: fixed;
+    z-index: 100;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: end;
+    border-bottom: 2px solid $color_header_nav_button;
+    box-shadow: 0px 0px 5px 1px $color_header_nav_button;
+    font-family: $font_header;
+    font-weight: bolder;
+
+    @media screen and (max-width: 699px) {
+        height: 3em;
+    }
+
+    @media screen and (max-width: 900px) {
+        height: 4em;
+    }
+}
+.header_nav__logo {
+    @include width-height-margin-padding(400px, 100%, 0, 0);
+    overflow: hidden;
+
+    a {
+        @include width-height-margin-padding(100%, 100%, 2%, 0);
+    }
+
+    img {
+        height: 100%;
+    }
+}
+
+.header_nav__navigation_large {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    @include width-height-margin-padding(70%, 60%, 0, 0);
+
+    > a {
+        @include width-height-margin-padding(30%, 100%, .1%, 0);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $color_header_nav_button;
+        font-weight: bold;
+        font-size: 1.2em;
+
+        @media screen and (max-width: 900px) {
+            font-size: 1em;
+        }
+
+        @media screen and (max-width: 800px) {
+            font-size: .9em;
+        }
+
+        @media screen and (max-width: 740px) {
+            font-size: .8em;
+        }
+    }
+
+    > a:hover {
+        background: $color_header_nav_button;
+        color: $color_header_nav_button_hover;
+        font-weight: bolder;
+    }
+}
+
+
+.header_nav__navigation_small__wrapper {
+
+    @include width-height-margin-padding(25%, 100%, 0, 0);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.header_nav__navigation_small__icon {
+    color: $color_header_nav_button;
+    font-size: 2em;
+}
+
+.header_nav__navigation_small {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 4em;
+    right: 0;
+    width: 70%;
+    background: $color_header_nav_button;
+    z-index: 100;
+    border-top: 2px solid $color_header_nav_button;
+    border-bottom: 2px solid $color_header_nav_button;
+
+    > a {
+        color: $color_header_nav_button_hover !important;
+        height: 2em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+        font-size: 1.2em;
+
+        > div {
+            @include width-height-margin-padding(100%, 100%, 0, 0);
+        }
+    }
+
+    > a:hover {
+        background-image: url(../../img/fon_2.png);
+        color: $color_header_nav_button !important;
+        font-weight: bolder;
+        font-size: 1.1em;
+    }
+}
