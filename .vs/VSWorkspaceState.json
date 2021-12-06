@@ -1,17 +1,16 @@
 {
   "ExpandedNodes": [
     "",
-    "\\public",
     "\\src",
     "\\src\\containers",
-    "\\src\\containers\\Sections",
+    "\\src\\containers\\Header",
+    "\\src\\containers\\Main",
     "\\src\\store",
     "\\src\\styles",
-    "\\src\\styles\\Section",
-    "\\src\\styles\\UI",
+    "\\src\\styles\\Element",
     "\\src\\UI",
-    "\\src\\UI\\Buttons"
+    "\\src\\UI\\Fotos"
   ],
-  "SelectedNode": "\\src\\store\\Home",
+  "SelectedNode": "\\src\\containers\\Header\\Header.js",
   "PreviewInSolutionExplorer": false
 }

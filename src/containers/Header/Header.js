@@ -1,7 +1,6 @@
 ﻿import React, { useState }  from 'react';
 import Media from 'react-media';
-
-import logo from '../../img/logo.png';
+import Logo from '../../UI/Fotos/Logo';
 import HeaderNav from '../../components/Header/HeaderNav';
 import HeaderNavSmall from '../../components/Header/HeaderNavSmall';
 
@@ -17,11 +16,8 @@ function Header(props) {
         <>
             <div className='header_wrapper'>
 
-                <div className="header_nav__logo">
-                    <a href="#header" >
-                        <img src={logo} alt="logo ТРЦ Савёлки" />
-                    </a>
-                </div>
+                <Logo />
+
                 <Media queries={{
                     small: "(max-width: 699px)",
                     medium: "(min-width: 700px) and (max-width: 900px)",
@@ -43,7 +39,6 @@ function Header(props) {
                     />
                     : null
             }
-            <a name="header"></a>
         </>
     )
 }

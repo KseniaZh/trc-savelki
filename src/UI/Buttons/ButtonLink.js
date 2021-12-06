@@ -15,13 +15,7 @@ function ButtonLink(props) {
                     style={{ backgroundImage: `url(${props.nameImage})` }}
                     onClick={props.onclick}
                 >
-                    <span
-                        className={props.icon}
-                        aria-hidden="true"
-                        onClick={props.onclick}
-                    >
-                        {props.name}
-                    </span>
+                {props.name}
                 </div>
             </Link>
         </div>

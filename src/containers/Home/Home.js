@@ -49,18 +49,13 @@ const Home = (props)=>{
   
         dispatch(saveScrollTop(refHome.current.scrollTop));
     }
-    let now = new Date();
+
     useEffect(() => {
         refHome.current.scrollTo(0, stateHome.scrollTop);
         refHome.current.addEventListener('scroll', hendlerScrollDownload);
-
-        
-        if (now.getDate() > 5) { console.log('data', now.getDate()) } else {
-            console.log('data', 'ПРОШЛА')
-        }
         
         return () => {
-            refHome.current.removeEventListener('scroll', hendlerScrollDownload);
+          //  refHome.current.removeEventListener('scroll', hendlerScrollDownload);
         }
 
     }, [])
@@ -68,63 +63,61 @@ const Home = (props)=>{
 
     return (
         <>
-          
+         
+            <div
+                ref={refHome}
+                className='homeWrapper'
+                onScroll={() => console.log('refHome.current.scrollTop', refHome.current.scrollTop)}
+            >
+                <a name="header"></a>
+                <SectionHello />
 
-     
-        <div
-            ref={refHome}
-            className='homeWrapper'
-            onScroll={() => console.log('refHome.current.scrollTop', refHome.current.scrollTop)}
-        >
+                <a name="project" ></a>
 
-            <SectionHello />
-
-            <a name="project" ></a>
-
-            {
-                flagButtonScroll ?
-                    <FontAwesomeIcon
-                        icon={faChevronUp}
-                        onClick={hendlerScrollDownUp}
-                        className='buttonScrollDownUp'
-                    />
-                    : null
-            }
-            {
-                flagButtonTel ?
-                    <a href="tel:+79686263515" className='button__tel ' >
-                        <FontAwesomeIcon icon={faPhone} />
-                    </a>
-                    :null
-            }
+                {
+                    flagButtonScroll ?
+                        <FontAwesomeIcon
+                            icon={faChevronUp}
+                            onClick={hendlerScrollDownUp}
+                            className='buttonScrollDownUp'
+                        />
+                        : null
+                }
+                {
+                    flagButtonTel ?
+                        <a href="tel:+79686263515" className='button__tel ' >
+                            <FontAwesomeIcon icon={faPhone} />
+                        </a>
+                        :null
+                }
             
-            <AboutUs />
+                <AboutUs />
 
-            <a name="plan"></a>
-            <Position />
+                <a name="plan"></a>
+                <Position />
 
-            <a name="goFloor"></a>
-            <div className='home__title'>
-                <h1>Прогулка по этажам "ТРЦ САВЁЛКИ"</h1>
-            </div>
+                <a name="goFloor"></a>
+                <div className='home__title'>
+                    <h1>Прогулка по этажам "ТРЦ САВЁЛКИ"</h1>
+                </div>
 
-            <GoFloor
-                ref={buttonGoElementRef}
-                onclick={hendlerSaveScrollTop}
-                stateFloorLeft={stateFloorLeft}
-                stateFloorRight={stateFloorRight}
-            />
+                <GoFloor
+                    ref={buttonGoElementRef}
+                    onclick={hendlerSaveScrollTop}
+                    stateFloorLeft={stateFloorLeft}
+                    stateFloorRight={stateFloorRight}
+                />
 
-            <a name="contacts"></a>
-            <div className='home__title' >
-                <h1>Наши контакты:</h1>
-            </div>
+                <a name="contacts"></a>
+                <div className='home__title' >
+                    <h1>Наши контакты:</h1>
+                </div>
 
-            <Contacts />
+                <Contacts />
 
-            <a name="location"></a>
+                <a name="location"></a>
 
-            <Footer />
+                <Footer />
             </div>
          
             </>

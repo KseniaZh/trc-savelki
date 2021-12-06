@@ -3,9 +3,10 @@ import { connect, useDispatch, useSelector } from "react-redux";
 import { useParams, Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
+import Logo from '../../UI/Fotos/Logo';
 import FotoButton from '../../UI/Buttons/FotoButton';
-import logo from '../../img/logo.png';
 import { saveNumberMainFoto } from '../../store/Carousel/actionsCarousel';
+
 
 function Element(props) {
 
@@ -32,14 +33,12 @@ function Element(props) {
 
             <div className='header_wrapper'>
 
-                <div className="header_nav__logo">
-                    <a href="#header" >
-                        <img src={logo} alt="logo ТРЦ Савёлки" />
-                    </a>
-                </div>
+                <Logo />
 
                 <div className="element_header__name">{element.nameFloor}</div>
+
                 <a href="tel:+79686263515" className='section_hello_tel element_header__tel' >тел: +7 968 626-35-15 </a>
+
             </div>
 
             <div className='element_title'>
@@ -70,6 +69,7 @@ function Element(props) {
                     })
                 } 
             </div>
+
  
         </div>
     )

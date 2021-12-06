@@ -1,5 +1,5 @@
 import React from 'react';
-import { Main } from './containers/Navigation/Main';
+import { Main } from './containers/Main/Main';
 import Header from './containers/Header/Header';
 
 
